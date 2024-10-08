@@ -104,5 +104,24 @@ for number in numbers:
         print(f"number = {number}: {e}")
 
 
+class NegativeNumberError(Exception):
+    def __init__(self):
+        message = "Nelze počítat odmocninu ze záporného čísla."
+        super().__init__(message)
+
+
+def sqrt(number):
+    if number < 0:
+        raise NegativeNumberError()
+    return number ** (1/2)
+
+
+numbers = [0, 1, 4, 16, -4, -16, 25, 36]
+for number in numbers:
+    try:
+        print(f"sqrt({number}) = {sqrt(number)}")
+    except NegativeNumberError as e:
+        print(f"ERROR pro parametr '{number}': NegativeNumberError: repr='{repr(e)}', str='{str(e)}'")
+
 print("=" * 80)
 print("Konec")
