@@ -87,5 +87,22 @@ try:
 except ValueError:
     print("Error: nelze počítat logaritmus pro záporné číslo.")
 
+print("-" * 80)
+
+
+def sqrt(num):
+    if num < 0:
+        raise ValueError("Nelze počítat odmocninu ze záporného čísla.")
+    return num ** (1/2)
+
+
+numbers = [16, 4, 1, 0, -4, 4.4]
+for number in numbers:
+    try:
+        print(f"sqrt({number}) = {sqrt(number)}")
+    except ValueError as e:
+        print(f"number = {number}: {e}")
+
+
 print("=" * 80)
 print("Konec")
