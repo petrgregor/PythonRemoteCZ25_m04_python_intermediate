@@ -106,7 +106,7 @@ for number in numbers:
 
 class NegativeNumberError(Exception):
     def __init__(self):
-        message = "Nelze počítat odmocninu ze záporného čísla."
+        message = "Nelze počítat odmocninu ze záporného čísla!"
         super().__init__(message)
 
 
