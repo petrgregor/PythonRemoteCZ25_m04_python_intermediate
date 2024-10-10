@@ -39,3 +39,6 @@ if __name__ == "__main__":
 
     visa_card = VisaCard(111222333, "11/2027", "Rudolf Jelínek")
     visa_card.pay()
+
+    visa_card2 = VisaCard(789456132, "09/2026", "Jarda Svoboda")
+    visa_card2.pay()
